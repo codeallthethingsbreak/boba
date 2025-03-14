@@ -85,7 +85,7 @@ func (s *rpcServer) Start() error {
 	mux.Handle("/", nodeHandler)
 	mux.HandleFunc("/healthz", healthzHandler(s.appVersion))
 
-	hs, err := ophttp.StartHTTPServer(s.endpoint, mux, ophttp.WithTimeouts(s.rpcServerTimeout))
+	hs, err := ophttp.StartHTTPServer(s.endpoint, mux)
 	if err != nil {
 		return fmt.Errorf("failed to start HTTP RPC server: %w", err)
 	}
