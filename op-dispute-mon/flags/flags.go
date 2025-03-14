@@ -3,6 +3,7 @@ package flags
 import (
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/ethereum-optimism/optimism/op-node/chaincfg"
 	"github.com/ethereum-optimism/optimism/op-service/flags"
@@ -78,6 +79,18 @@ var (
 		EnvVars: prefixEnvVars("MAX_CONCURRENCY"),
 		Value:   config.DefaultMaxConcurrency,
 	}
+	RollupRpcTimeoutFlag = &cli.DurationFlag{
+		Name:    "rollup-rpc-timeout",
+		Usage:   "Timeout for rollup RPC requests",
+		EnvVars: prefixEnvVars("ROLLUP_RPC_TIMEOUT"),
+		Value:   time.Second * 15,
+	}
+	RollupRpcBatchTimeoutFlag = &cli.DurationFlag{
+		Name:    "rollup-rpc-batch-timeout",
+		Usage:   "Timeout for rollup RPC batch requests",
+		EnvVars: prefixEnvVars("ROLLUP_RPC_BATCH_TIMEOUT"),
+		Value:   time.Second * 30,
+	}
 )
 
 // requiredFlags are checked by [CheckRequired]
@@ -96,6 +109,8 @@ var optionalFlags = []cli.Flag{
 	GameWindowFlag,
 	IgnoredGamesFlag,
 	MaxConcurrencyFlag,
+	RollupRpcTimeoutFlag,
+	RollupRpcBatchTimeoutFlag,
 }
 
 func init() {
@@ -167,11 +182,13 @@ func NewConfigFromCLI(ctx *cli.Context) (*config.Config, error) {
 		RollupRpc:          ctx.String(RollupRpcFlag.Name),
 		SupervisorRpc:      ctx.String(SupervisorRpcFlag.Name),
 
-		HonestActors:    actors,
-		MonitorInterval: ctx.Duration(MonitorIntervalFlag.Name),
-		GameWindow:      ctx.Duration(GameWindowFlag.Name),
-		IgnoredGames:    ignoredGames,
-		MaxConcurrency:  maxConcurrency,
+		HonestActors:          actors,
+		MonitorInterval:       ctx.Duration(MonitorIntervalFlag.Name),
+		GameWindow:            ctx.Duration(GameWindowFlag.Name),
+		IgnoredGames:          ignoredGames,
+		MaxConcurrency:        maxConcurrency,
+		RollupRpcTimeout:      ctx.Duration(RollupRpcTimeoutFlag.Name),
+		RollupRpcBatchTimeout: ctx.Duration(RollupRpcBatchTimeoutFlag.Name),
 
 		MetricsConfig: metricsConfig,
 		PprofConfig:   pprofConfig,
