@@ -196,6 +196,7 @@ var bobaSepoliaCfg = rollup.Config{
 	FjordTime:               u64Ptr(1722297600),
 	GraniteTime:             u64Ptr(1726470000),
 	HoloceneTime:            u64Ptr(1736150400),
+	PectraBlobScheduleTime:  u64Ptr(1742486400),
 	ProtocolVersionsAddress: common.HexToAddress("0x0000000000000000000000000000000000000000"),
 	ChainOpConfig:           defaultOpConfig,
 }
@@ -310,6 +311,7 @@ var bobaDev0Cfg = rollup.Config{
 	FjordTime:               u64Ptr(1724692150),
 	GraniteTime:             u64Ptr(1724914800),
 	HoloceneTime:            u64Ptr(1732435200),
+	PectraBlobScheduleTime:  u64Ptr(1742486400),
 	ProtocolVersionsAddress: common.HexToAddress("0x252CbE9517F731C618961D890D534183822dcC8d"),
 	ChainOpConfig:           defaultOpConfig,
 }
