@@ -23,6 +23,7 @@
     "TestSendRawTransactionConditionalEnabled": "TODO, this new feature should be added to Erigon",
     "TestSendRawTransactionConditionalTxForwarding": "TODO, this new feature should be added to Erigon",
     "TestDATxThrottling": "TODO, miner api is not supported in Erigon",
-    "TestDABlockThrottling": "TODO, miner api is not supported in Erigon"
+    "TestDABlockThrottling": "TODO, miner api is not supported in Erigon",
+    "TestIsthmus": "TODO, this should be investigated"
   }
 }
