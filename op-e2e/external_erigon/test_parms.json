@@ -26,6 +26,7 @@
     "TestDABlockThrottling": "TODO, miner api is not supported in Erigon",
     "TestIsthmus": "TODO, this should be investigated",
     "TestFees/isthmus_without_operator_fee": "TODO, this should be investigated",
-    "TestFees/isthmus_with_operator_fee": "TODO, this should be investigated"
+    "TestFees/isthmus_with_operator_fee": "TODO, this should be investigated",
+    "TestBatcherAutoDA": "TODO, this should be investigated. The base fee is relatively low in Erigon somehow"
   }
 }

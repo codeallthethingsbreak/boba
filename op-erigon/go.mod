@@ -264,8 +264,8 @@ replace github.com/anacrolix/torrent => github.com/erigontech/torrent v1.54.2-al
 
 replace github.com/erigontech/erigon-snapshot => github.com/ledgerwatch/erigon-snapshot v1.3.1-0.20240805114253-42da880260bb
 
-replace github.com/erigontech/erigon-lib => github.com/bobanetwork/op-erigon/erigon-lib v0.0.0-20250114213955-82134df00b07
+replace github.com/erigontech/erigon-lib => github.com/bobanetwork/op-erigon/erigon-lib v0.0.0-20250115201323-ea6e61130f70
 
 replace github.com/tendermint/tendermint => github.com/bnb-chain/tendermint v0.31.12
 
-replace github.com/erigontech/erigon => github.com/bobanetwork/op-erigon v1.9.7-0.20250114222040-d8b7f17b3802
+replace github.com/erigontech/erigon => github.com/bobanetwork/op-erigon v1.2.12-beta.1
