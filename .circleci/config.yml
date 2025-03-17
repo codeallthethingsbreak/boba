@@ -923,7 +923,7 @@ jobs:
         default: false
     docker:
       - image: <<pipeline.parameters.ci_builder_image>>
-    resource_class: xlarge
+    resource_class: 2xlarge
     steps:
       - checkout
       - check-changed:
