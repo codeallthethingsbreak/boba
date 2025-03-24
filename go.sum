@@ -716,8 +716,8 @@ github.com/bits-and-blooms/bitset v1.20.0/go.mod h1:7hO7Gc7Pp1vODcmWvKMRA9BNmbv6
 github.com/bketelsen/crypt v0.0.4/go.mod h1:aI6NrJ0pMGgvZKL1iVgXLnfIFJtfV+bKCoqOes/6LfM=
 github.com/bmatcuk/doublestar/v4 v4.8.1 h1:54Bopc5c2cAvhLRAzqOGCYHYyhcDHsFF4wWIR5wKP38=
 github.com/bmatcuk/doublestar/v4 v4.8.1/go.mod h1:xBQ8jztBU6kakFMg+8WGxn0c6z1fTSPVIjEY1Wr7jzc=
-github.com/bobanetwork/op-geth v1.101500.1-0.20250318211942-bfd135c9a5b9 h1:wF1J4AM7mJBhTvgGAlftIPkSylkRlPU8ZmoXbErGkzw=
-github.com/bobanetwork/op-geth v1.101500.1-0.20250318211942-bfd135c9a5b9/go.mod h1:PTF8YK+mAQ/qx9LJxWMPRkf2F6driXoiVD/8HEWEEF8=
+github.com/bobanetwork/op-geth v1.101503.2-0.20250324203306-04b8160d09a4 h1:EMSzr50Ne61GR1WRA2e23sRJLVnHcshfBNcN2xIRVTs=
+github.com/bobanetwork/op-geth v1.101503.2-0.20250324203306-04b8160d09a4/go.mod h1:PTF8YK+mAQ/qx9LJxWMPRkf2F6driXoiVD/8HEWEEF8=
 github.com/boltdb/bolt v1.3.1 h1:JQmyP4ZBrce+ZQu0dY660FMfatumYDLun9hBCUVIkF4=
 github.com/boltdb/bolt v1.3.1/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
 github.com/boombuler/barcode v1.0.0/go.mod h1:paBWMcWSl3LHKBqUq+rly7CNSldXjb2rDl3JlRe0mD8=
