@@ -941,6 +941,7 @@ jobs:
           command: |
             make fuzz
           working_directory: "<<parameters.package_name>>"
+          no_output_timeout: 30m
       - run:
           name: Copy fuzz artifacts
           command: |
