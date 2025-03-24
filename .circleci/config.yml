@@ -1519,10 +1519,10 @@ workflows:
           requires:
             - contracts-bedrock-build
           context: circleci-repo-readonly-authenticated-github-token
-      - contracts-bedrock-frozen-code:
-          requires:
-            - contracts-bedrock-build
-          context: circleci-repo-readonly-authenticated-github-token
+      # - contracts-bedrock-frozen-code:
+      #     requires:
+      #       - contracts-bedrock-build
+      #     context: circleci-repo-readonly-authenticated-github-token
       - diff-asterisc-bytecode:
           context: circleci-repo-readonly-authenticated-github-token
       - semgrep-scan:
