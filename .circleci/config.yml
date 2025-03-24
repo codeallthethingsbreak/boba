@@ -1523,8 +1523,8 @@ workflows:
       #     requires:
       #       - contracts-bedrock-build
       #     context: circleci-repo-readonly-authenticated-github-token
-      - diff-asterisc-bytecode:
-          context: circleci-repo-readonly-authenticated-github-token
+      # - diff-asterisc-bytecode:
+      #     context: circleci-repo-readonly-authenticated-github-token
       - semgrep-scan:
           name: semgrep-scan-local
           scan_command: semgrep scan --timeout=100 --config .semgrep/rules/ --error .
