@@ -158,6 +158,8 @@ func (s *interopE2ESystem) newNodeForL2(
 		L2: &node.L2EndpointConfig{
 			L2EngineAddr:      l2Geth.AuthRPC().RPC(),
 			L2EngineJWTSecret: testingJWTSecret,
+			L2RpcTimeout:      time.Second * 10,
+			L2RpcBatchTimeout: time.Second * 30,
 		},
 		Beacon: &node.L1BeaconEndpointConfig{
 			BeaconAddr: s.beacon.BeaconAddr(),

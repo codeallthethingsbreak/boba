@@ -25,9 +25,14 @@ type rpcServer struct {
 	appVersion string
 	log        log.Logger
 	sources.L2Client
+	rpcServerTimeout ophttp.HTTPTimeouts
 }
 
 func newRPCServer(rpcCfg *RPCConfig, rollupCfg *rollup.Config, l2Client l2EthClient, dr driverClient, safedb SafeDBReader, log log.Logger, appVersion string, m metrics.Metricer) (*rpcServer, error) {
+	rpcServerTimeout := ophttp.DefaultTimeouts
+	if rpcCfg.ListenTimeout != nil {
+		rpcServerTimeout = *rpcCfg.ListenTimeout
+	}
 	api := NewNodeAPI(rollupCfg, l2Client, dr, safedb, log.New("rpc", "node"), m)
 	// TODO: extend RPC config with options for WS, IPC and HTTP RPC connections
 	endpoint := net.JoinHostPort(rpcCfg.ListenAddr, strconv.Itoa(rpcCfg.ListenPort))
@@ -38,8 +43,9 @@ func newRPCServer(rpcCfg *RPCConfig, rollupCfg *rollup.Config, l2Client l2EthCli
 			Service:       api,
 			Authenticated: false,
 		}},
-		appVersion: appVersion,
-		log:        log,
+		appVersion:       appVersion,
+		log:              log,
+		rpcServerTimeout: rpcServerTimeout,
 	}
 	return r, nil
 }
