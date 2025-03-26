@@ -10,8 +10,8 @@ The Pectra upgrade on Ethereum is set to be optimistically activated on
 
 Node operators will need to upgrade to the respective releases before the activation dates.These following steps are necessary for every node operator:
 
-* op-node at [v1.6.16](https://github.com/bobanetwork/boba/releases/tag/v1.6.15)
-* op-geth at [v1.101500.0](https://github.com/bobanetwork/op-geth/releases/tag/v1.101500.0)
+* op-node at [v1.6.17](https://github.com/bobanetwork/boba/releases/tag/v1.6.17)
+* op-geth at [v1.101503.0](https://github.com/bobanetwork/op-geth/releases/tag/v1.101503.0)
 
 * op-erigon at [v1.2.12-beta.1](https://github.com/bobanetwork/op-erigon/releases/tag/v1.2.12-beta.1)
 
